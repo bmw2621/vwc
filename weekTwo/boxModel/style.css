@@ -1,0 +1,39 @@
+:root {
+    --color1: rgba(251, 200, 94, 1);
+    --color2: rgba(102, 161, 143, 1);
+    --color3: rgba(178, 88, 36, 1);
+    --color4: rgba(88, 79, 75, 1);
+    --color5: rgba(132, 235, 208, 1);
+}
+
+body {
+    height: 300px;
+    width: 300px;
+}
+
+div {
+    width: 80%;
+    height: 80%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.marg {
+  background-color: var(--color4);
+}
+
+.bord {
+  background-color: var(--color2);
+}
+
+.pad {
+  background-color: var(--color3);
+}
+
+.cont {
+  background-color: var(--color1);
+}
