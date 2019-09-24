@@ -73,6 +73,13 @@ body {
 
 @media screen and (min-width: 571px) {
 
+    header {
+        min-height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     div.link {
         text-align: center;
       }
