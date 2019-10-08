@@ -4,7 +4,7 @@
     --color7: #ABB2C0;
     --color8: #5A606E;
 }
-html {
+html, body, .container {
     height: 100%;
     width: 100%;
     margin: 0px;
@@ -12,105 +12,45 @@ html {
 }
 body {
     background-color: var(--color1);
-    height: 100%;
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
-
-}
-
-.containerMain {
-    width: 100%;
-    height: 100%;
-    padding: 0px;
-    margin: 0px;
-}
-
-#bgMain {
-    width: 100%;
-    height: 100%;
-    padding: 0px;
-    margin: 0px;
-    position: relative;
-    overflow: hidden;
-    background: url("../images/bill1.png") no-repeat;
-    background-size: cover;
-    background-position: center;
-    opacity: 0.4;    
-}
-
-#mainContent {
-    width: 100%;
-    height: 100%;
-    padding: 0px;
-    margin: 0px;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    margin-left: -120px;
-    z-index: 2;
-    font-family: sans-serif;
-    font-size: 25px;
-    font-weight: bolder;
-    color: var(--color7)
-}
-
-#mainSub {
-    width: 100%;
-    height: 100%;
-    padding: 0px;
-    margin: 0px;
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    margin-left: -75px;
-    z-index: 3;
-    font-family: sans-serif;
-    font-size: 25px;
-    font-weight: light;
-    color: var(--color7)
-}
-
-.arrows {
-    width: 100%;
-    height: 100%;
-    padding: 0px;
-    margin: 0px;
-    position: absolute;
-    top: 50%;
-    z-index: 3;
-    display: flex;
-    justify-content: space-between;
 }
 
 i {
     border: 1px solid var(--color2);
     border-width: 0 10px 10px 0;
     display: inline-block;
-    padding: 25px;
-    margin: 25px;
-  }
-  
-  .right {
-    transform: rotate(-45deg);
-    transform: scale(5, 5);
-    -webkit-transform: rotate(-45deg);
-  }
+    padding: 20px;
+    margin: 20px;
+}
 
-  .left {
-    transform: rotate(135deg);
-    -webkit-transform: rotate(135deg);
-  }
+nav {
+    background-color: var(--color1);
+    height: 90px;
+    width: 100%;
+    position: absolute;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-#mainButton {
+.arrows {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+     justify-self: center;
+    /* top: 50%; */
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
     width: 50%;
+    min-width: 290px;
     height: 50px;
     padding: 0px;
     margin: 0px;
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    margin-left: -85px;
+    align-self: center;
     z-index: 3;
     font-family: sans-serif;
     font-size: 25px;
@@ -121,26 +61,110 @@ i {
     align-items: center;
     justify-content: center;
     border-radius: 25px;
-    border: 3px solid var(--color2);
+    border: 2px solid var(--color2);
 }
 
 .hamburger {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     padding: 0px;
-    margin-top: 10px;
-    margin-right: 10px;
+    margin-top: 25px;
+    margin-right: 20px;
     position: absolute;
     top: 0px;
     right: 0px;
-    z-index: 4;
+    z-index: 5;
     display: flex;
     flex-direction: column;
 }
 
 .hamburgerSlice {
-    width: 40px;
+    width: 50px;
     height: 10px;
     border-bottom: 3px solid var(--color2);
     /* position: absolute; */
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    margin-left: 30px;
+}
+
+.right {
+    transform: rotate(-45deg);
+    transform: scale(5, 5);
+    -webkit-transform: rotate(-45deg);
+    margin-right: 30px;
+}
+
+.slideContent{
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+    top: 50%;
+    bottom: 5%;
+    margin-top: -100px;
+    z-index: 21;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.socialMediaLogo, .empty {
+    width: 15%;
+    max-width: 70px;
+    max-height: 70px;
+    margin: 5px;
+}
+
+
+#bgMain, #bgProjects, #bgBlog {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+#bgMain {
+    background: url("../images/bill1.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;    
+}
+
+#bgProjects {
+    background: url("../images/bill2.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;    
+}
+
+#bgBlog {
+    background: url("../images/bill3.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;    
+}
+
+#mainContent, #projectsContent, #blogContent {
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    z-index: 3;
+    font-family: sans-serif;
+    font-size: 25px;
+    font-weight: bolder;
+    color: var(--color7)
+}
+
+#sub {
+    font-weight: lighter;
 }
