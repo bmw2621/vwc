@@ -10,6 +10,11 @@ html, body, .container {
     margin: 0px;
     padding: 0px;
 }
+
+body {
+    overflow: hidden;
+}
+
 body {
     background-color: var(--color1);
 }
@@ -163,6 +168,23 @@ nav {
     font-size: 25px;
     font-weight: bolder;
     color: var(--color7)
+}
+
+#main {
+    position: absolute;
+    left: 0%;
+    transition: all .5s ease;
+}
+#projects {
+    position: absolute;
+    left: -100%;
+    transition: all .5s ease;
+}
+
+#blog {
+    position: absolute;
+    left: 100%;
+    transition: all .5s ease;
 }
 
 #sub {
