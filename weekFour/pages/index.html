@@ -5,72 +5,75 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Document</title>
-        <link rel="stylesheet" href="../styles/styles.css">
+        <link rel="stylesheet" href="../styles/base.css">
+        <link rel="stylesheet" href="../styles/layout.css">
+        <link rel="stylesheet" href="../styles/state.css">
         <script src="../scripts/index.js"></script>
+        <title>Ben Winchester</title>
     </head>
     <body>
-        
-        <!-- <nav>
-            <img class="socialMediaLogo" src="../images/github-logo.png" alt="" class="socialMedia">
-            <img class="socialMediaLogo" src="../images/codepen-logo.png" alt="" class="socialMedia">
-            <img class="socialMediaLogo" src="../images/twitter-logo.png" alt="" class="socialMedia">
-            <img class="socialMediaLogo" src="../images/linkedin-logo.png" alt="" class="socialMedia">
+
+        <nav class="isHiddenTop" id="nav">
+            <img id="github" class="socialMediaLogo" src="../images/github-logo.png" alt="">
+            <img id="codepen" class="socialMediaLogo" src="../images/codepen-logo.png" alt="">
+            <img id="twitter" class="socialMediaLogo" src="../images/twitter-logo.png" alt="">
+            <img id="linkedin" class="socialMediaLogo" src="../images/linkedin-logo.png" alt="">
             <div class="empty"></div>
-        </nav> -->
-        <div class="hamburger">
+        </nav>
+        <div class="hamburger" id="hamburger">
             <div class="hamburgerSlice"></div>
             <div class="hamburgerSlice"></div>
             <div class="hamburgerSlice"></div>
         </div>
-        
-        <div class="container" id="main">
+
+        <div class="container isCenter" id="main">
                 <div id="bgMain"></div>
                 <div class="slideContent">
-                    <div id="mainContent">
-                        Benjamin Winchester 
+                    <div class="content">
+                        Benjamin Winchester
                         <br>
-                        <span id="sub">Web Developer</span>
-                    </div>                    
-                    <div class="arrows">
-                        <div id="leftArrow"><i class="left"></i></div>
-                        <div id="rightArrow"><i class="right"></i></div>
+                        <span class="sub">Web Developer</span>
                     </div>
-                    <div class="button">Hire Me</div>
+                    <div class="arrows">
+                        <div class="leftArrow"><i class="left"></i></div>
+                        <div class="rightArrow"><i class="right"></i></div>
+                    </div>
+                    <a href="about.html"><div class="button">Hire Me</div></a>
                 </div>
         </div>
 
-        <div class="container" id="projects">
+        <div class="container isLeft" id="projects">
                 <div id="bgProjects"></div>
                 <div class="slideContent">
-                    <div id="projectsContent">
+                    <div class="content">
                         Projects
                         <br>
-                        <span id="sub">See whats up...</span>
-                    </div>                    
-                    <div class="arrows">
-                        <div id="leftArrow"><i class="left"></i></div>
-                        <div id="rightArrow"><i class="right"></i></div>
+                        <span class="sub">See whats up...</span>
                     </div>
-                    <div class="button">Browse Work</div>
+                    <div class="arrows">
+                        <div class="leftArrow" style="visibility: hidden;"><i class="left"></i></div>
+                        <div class="rightArrow"><i class="right"></i></div>
+                    </div>
+                    <a href="projects.html"><div class="button">Browse Work</div></a>
                 </div>
         </div>
 
-        <div class="container" id="blog">
+        <div class="container isRight isHidden" id="blog">
                 <div id="bgBlog"></div>
                 <div class="slideContent">
-                    <div id="blogContent">
+                    <div class="content">
                         Blog
                         <br>
-                        <span id="sub">Talk around the town...</span>
-                    </div>                    
-                    <div class="arrows">
-                        <div id="leftArrow"><i class="left"></i></div>
-                        <div id="rightArrow"><i class="right"></i></div>
+                        <span class="sub">Talk around the town...</span>
                     </div>
-                    <div class="button">Read Stuff</div>
+                    <div class="arrows">
+                        <div class="leftArrow"><i class="left"></i></div>
+                        <div class="rightArrow" style="visibility: hidden;"><i class="right"></i></div>
+                    </div>
+                    <a href="blog.html"><div class="button">Read Stuff</div></a>
                 </div>
-        </div> 
-        
-        
+        </div>
+
+
     </body>
 </html>

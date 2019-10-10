@@ -1,0 +1,45 @@
+:root {
+    --color1: #282C34;
+    --color2: #16A085;
+    --color7: #ABB2C0;
+    --color8: #5A606E;
+}
+html, body, .container {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body {
+    overflow: hidden;
+    background-color: var(--color1);
+    transition: all .5s ease-in-out;
+}
+
+i {
+    border: 1px solid var(--color2);
+    border-width: 0 10px 10px 0;
+    display: inline-block;
+    padding: 20px;
+    margin: 20px;
+}
+
+nav {
+    background-color: var(--color1);
+    height: 90px;
+    width: 100%;
+    position: absolute;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.sub {
+    font-weight: lighter;
+}

@@ -1,0 +1,33 @@
+.isLeft {
+    position: absolute;
+    left: -100%;
+    transition: all .5s ease-in-out;
+}
+
+.isCenter {
+    position: absolute;
+    left: 0%;
+    transition: all .5s ease-in-out;
+}
+
+.isRight {
+    position: absolute;
+    left: 100%;
+    transition: all .5s ease-in-out;
+}
+
+.isHidden {
+  display: none;
+}
+
+.isHiddenTop {
+    position: absolute;
+    top: -100%;
+    transition: all .5s ease-in-out;
+}
+
+.isTop {
+    position: absolute;
+    top: 0%;
+    transition: all .5s ease-in-out;
+}

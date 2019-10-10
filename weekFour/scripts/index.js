@@ -1,13 +1,18 @@
 var currentView = 1;
 
 window.onload = () => {
-        
-    var leftArrow = document.getElementById("leftArrow");
-    var rightArrow = document.getElementById("rightArrow");
-    
 
-    leftArrow.addEventListener("click", slideRight);
-    rightArrow.addEventListener("click", slideLeft);
+    var leftArrows = document.getElementsByClassName("leftArrow");
+    var rightArrows = document.getElementsByClassName("rightArrow");
+    var hamburger = document.getElementById("hamburger");
+
+    for(let i=0; i<leftArrows.length;i++) {leftArrows.item(i).addEventListener("click", slideRight);}
+    for(let i=0; i<rightArrows.length;i++){rightArrows.item(i).addEventListener("click", slideLeft);}
+    hamburger.addEventListener("click", navToggle);
+    document.getElementById("github").addEventListener("click", () => window.location.href = "https://www.github.com/bmw2621");
+    document.getElementById("linkedin").addEventListener("click", () => window.location.href = "https://wwww.linkedin.com/in/benjamin_m_winchester");
+    document.getElementById("twitter").addEventListener("click", () => window.location.href = "https://twitter.com/b_m_winchester");
+    document.getElementById("codepen").addEventListener("click", () => window.location.href = "https://codepen.io/bmw2621/");
 }
 
 function slideRight() {
@@ -16,15 +21,22 @@ function slideRight() {
     var projectsDiv = document.getElementById("projects");
 
     if(currentView === 1){
-        mainDiv.style.left = "100%";
-        projectsDiv.style.left = "0%";
-        blogDiv.style.left = "200%";
-        currentView--;
+      console.log(currentView);
+      projectsDiv.classList.remove("isLeft")
+      projectsDiv.classList.add("isCenter")
+      mainDiv.classList.remove("isCenter");
+      mainDiv.classList.add("isRight");
+      mainDiv.classList.add("isHidden");
+      currentView--;
+      console.log("Slide -> " + currentView)
     } else if(currentView === 2) {
-        mainDiv.style.left = "0%";
-        projectsDiv.style.left = "-100%";
-        blogDiv.style.left = "100%";
-        currentView--
+      mainDiv.classList.remove("isLeft")
+      mainDiv.classList.add("isCenter")
+      blogDiv.classList.remove("isCenter");
+      blogDiv.classList.add("isRight");
+      blogDiv.classList.add("isHidden");
+      currentView--;
+      console.log("Slide -> " + currentView)
     }
 }
 
@@ -34,14 +46,27 @@ function slideLeft() {
     var projectsDiv = document.getElementById("projects");
 
     if(currentView === 0){
-        mainDiv.style.left = "0%";
-        projectsDiv.style.left = "-100%";
-        blogDiv.style.left = "100%";
-        currentView++;
+      console.log(currentView)
+      projectsDiv.classList.remove("isCenter");
+      projectsDiv.classList.add("isLeft");
+      mainDiv.classList.remove("isRight");
+      mainDiv.classList.remove("isHidden");
+      mainDiv.classList.add("isCenter");
+      currentView++;
+      console.log("Slide -> " + currentView)
     } else if(currentView === 1) {
-        mainDiv.style.left = "-100%";
-        projectsDiv.style.left = "-200%";
-        blogDiv.style.left = "0%";
-        currentView++
+      console.log(currentView)
+      blogDiv.classList.remove("isRight");
+      blogDiv.classList.remove("isHidden")
+      blogDiv.classList.add("isCenter")
+      mainDiv.classList.remove("isCenter");
+      mainDiv.classList.add("isLeft");
+        currentView++;
+        console.log("Slide -> " + currentView)
     }
+}
+
+function navToggle() {
+  var nav = document.getElementById("nav");
+  nav.classList.contains("isHiddenTop") ? nav.classList.remove("isHiddenTop") : nav.classList.add("isHiddenTop");
 }
