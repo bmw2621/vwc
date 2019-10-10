@@ -10,7 +10,7 @@ window.onload = () => {
     for(let i=0; i<rightArrows.length;i++){rightArrows.item(i).addEventListener("click", slideLeft);}
     hamburger.addEventListener("click", navToggle);
     document.getElementById("github").addEventListener("click", () => window.location.href = "https://www.github.com/bmw2621");
-    document.getElementById("linkedin").addEventListener("click", () => window.location.href = "https://wwww.linkedin.com/in/benjamin_m_winchester");
+    document.getElementById("linkedin").addEventListener("click", () => window.location.href = "https://www.linkedin.com/in/benjamin-m-winchester");
     document.getElementById("twitter").addEventListener("click", () => window.location.href = "https://twitter.com/b_m_winchester");
     document.getElementById("codepen").addEventListener("click", () => window.location.href = "https://codepen.io/bmw2621/");
 }
