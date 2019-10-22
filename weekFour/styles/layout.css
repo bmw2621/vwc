@@ -111,25 +111,28 @@
   }
 
   #bgMain {
-      background: url("../images/bill1.png") no-repeat;
-      background-size: cover;
-      background-position: center;
-      opacity: 0.4;
-  }
+    background: url("../images/ben1.png") no-repeat;
+    background-size: cover;
+    background-position:80% center;
+    filter: grayscale(100%);
+    opacity: 0.2;
+}
 
-  #bgProjects {
-      background: url("../images/bill2.png") no-repeat;
-      background-size: cover;
-      background-position: center;
-      opacity: 0.2;
-  }
+#bgProjects {
+    background: url("../images/ben4.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%);
+    opacity: 0.2;
+}
 
-  #bgBlog {
-      background: url("../images/bill3.png") no-repeat;
-      background-size: cover;
-      background-position: center;
-      opacity: 0.2;
-  }
+#bgBlog {
+    background: url("../images/ben5.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%);
+    opacity: 0.2;
+}
 }
 
 
@@ -216,30 +219,28 @@
   }
 
   #bgMain {
-    background: url("../images/bill1.png") no-repeat;
+    background: url("../images/ben1.png") no-repeat;
+    background-size: cover;
+    background-position: center 30%;
+    filter: grayscale(100%);
+    opacity: 0.2;
+}
+
+#bgProjects {
+    background: url("../images/ben4.png") no-repeat;
     background-size: cover;
     background-position: center;
+    filter: grayscale(100%);
     opacity: 0.2;
-  }
+}
 
-  #bgProjects {
-      background: url("../images/bill2.png") no-repeat;
-      background-size: cover;
-      background-position: center;
-      opacity: 0.3;
-  }
-
-  #blog {
-    order: 2;
-    justify-content: flex-end;
-  }
-
-  #bgBlog {
-      background: url("../images/bill3.png") no-repeat;
-      background-size: cover;
-      background-position: center;
-      opacity: 0.5;
-  }
+#bgBlog {
+    background: url("../images/ben5.png") no-repeat;
+    background-size: cover;
+    background-position: center 25%;
+    filter: grayscale(100%);
+    opacity: 0.2;
+}
 
   #projects {
     order: 3;

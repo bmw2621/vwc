@@ -16,6 +16,7 @@ window.onload = () => {
     document.getElementById("linkedin").addEventListener("click", () => window.location.href = "https://www.linkedin.com/in/benjamin-m-winchester");
     document.getElementById("twitter").addEventListener("click", () => window.location.href = "https://twitter.com/b_m_winchester");
     document.getElementById("codepen").addEventListener("click", () => window.location.href = "https://codepen.io/bmw2621/");
+    document.getElementById("eegg").addEventListener("dblclick", () => document.documentElement.setAttribute('class', 'rotateme'))
 }
 
 function slideRight() {
@@ -70,7 +71,7 @@ function slideLeft() {
       mainDiv.classList.add("isLeft");
       currentView++;
       console.log("Slide -> " + currentView)
-    }
+    }    
 }
 
 function navToggle() {
