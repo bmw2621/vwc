@@ -1,4 +1,7 @@
 var currentView = 1;
+const sleep = (milliseconds) => {
+return new Promise(resolve => setTimeout(resolve, milliseconds))
+}
 
 window.onload = () => {
 
@@ -26,7 +29,9 @@ function slideRight() {
       projectsDiv.classList.add("isCenter")
       mainDiv.classList.remove("isCenter");
       mainDiv.classList.add("isRight");
-      mainDiv.classList.add("isHidden");
+      sleep(500).then(() => {
+        mainDiv.classList.add("isHidden")
+      });
       currentView--;
       console.log("Slide -> " + currentView)
     } else if(currentView === 2) {
@@ -34,7 +39,9 @@ function slideRight() {
       mainDiv.classList.add("isCenter")
       blogDiv.classList.remove("isCenter");
       blogDiv.classList.add("isRight");
-      blogDiv.classList.add("isHidden");
+      sleep(500).then(() => {
+        blogDiv.classList.add("isHidden")
+      });
       currentView--;
       console.log("Slide -> " + currentView)
     }
@@ -49,9 +56,9 @@ function slideLeft() {
       console.log(currentView)
       projectsDiv.classList.remove("isCenter");
       projectsDiv.classList.add("isLeft");
+      mainDiv.classList.add("isCenter");
       mainDiv.classList.remove("isRight");
       mainDiv.classList.remove("isHidden");
-      mainDiv.classList.add("isCenter");
       currentView++;
       console.log("Slide -> " + currentView)
     } else if(currentView === 1) {
@@ -61,8 +68,8 @@ function slideLeft() {
       blogDiv.classList.add("isCenter")
       mainDiv.classList.remove("isCenter");
       mainDiv.classList.add("isLeft");
-        currentView++;
-        console.log("Slide -> " + currentView)
+      currentView++;
+      console.log("Slide -> " + currentView)
     }
 }
 
