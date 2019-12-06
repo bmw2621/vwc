@@ -8,6 +8,7 @@ const closedForm = (k) => {
     return answer;
 }
 
+// Recursive Form
 const recursiveForm = (k) => {
     if(k == 1){return 1}
     return k + recursiveForm(k-1)
