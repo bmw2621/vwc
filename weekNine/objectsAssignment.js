@@ -29,12 +29,12 @@ class Dog extends Pet{
     this.breed = breed;
   }
   throwBall(){
-    console.log(`${this.name} fetched the ball, brought it back to you and says...`)
-    this.makeNoise()
+    console.log(`You throw the ball for ${this.name}...`)
+    console.log(`${this.name} fetched the ball, brought it back to you and says ${this.makeNoise()}\n`);
   }
   feed(){
-    console.log(`${this.name} fetched the ball, brought it back to you and says...`)
-    this.makeNoise()
+    console.log(`You give a treat to ${this.name}...`)
+    console.log(`${this.name} fetched the ball, brought it back to you and says ${this.makeNoise()}\n`);
   }
 }
 
@@ -43,16 +43,20 @@ class Cat extends Pet{
     super(name, age, "Hiss")
     this.breed = breed;
   }
+
   throwBall(){
-    console.log(`${this.name} pissed on your carpet, shredded your curtains, and says...`)
-    this.makeNoise()
+    console.log(`Your throw the ball for ${this.name}...`)
+    console.log(`${this.name} pissed on your carpet, shredded your curtains, and says ${this.makeNoise()}\n`);
   }
+
   feed(){
-    console.log(`${this.name} says ${this.noise}.  and walked away`)
+    console.log(`You give a treat to ${this.name}...`)
+    console.log(`${this.name} says ${this.sound}!  and walked away\n`);
+
   }
   setNoise(noise){
     if(noise != "Hiss"){
-      console.log(`Error: ${this.name} does not realistically make that noise`)
+      console.log(`Error: ${this.name} does not realistically make that noise\n`)
     }
   }
 }
@@ -68,5 +72,3 @@ Fluffy.feed()
 
 Spike.throwBall();
 Fluffy.throwBall();
-
-Spike.makeNoise();
