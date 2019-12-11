@@ -27,6 +27,8 @@ class Dog extends Pet{
   constructor(name, age, breed){
     super(name, age, "Woof")
     this.breed = breed;
+    this.type = "Dog";
+    console.log(`You just adopted a ${this.breed} ${this.type} named ${this.name}\n`)
   }
   throwBall(){
     console.log(`You throw the ball for ${this.name}...`)
@@ -42,6 +44,8 @@ class Cat extends Pet{
   constructor(name, age, breed){
     super(name, age, "Hiss")
     this.breed = breed;
+    this.type = "Cat";
+    console.log(`You just adopted a ${this.breed} ${this.type} named ${this.name}\n`)
   }
 
   throwBall(){
@@ -56,19 +60,25 @@ class Cat extends Pet{
   }
   setNoise(noise){
     if(noise != "Hiss"){
-      console.log(`Error: ${this.name} does not realistically make that noise\n`)
+      console.log(`HISSError: ${this.name} does not realistically make that noise\n`)
     }
   }
 }
 
-var Spike = new Dog("Spike", 2, "Weimereiner");
+class Siamese extends Cat {
+    constructor(name, age){
+        super(name, age, "Siamese")
+    }
+    siameseMethod(){
+        console.log("Me Siamese...")
+    }
+}
+
+
 var Fluffy = new Cat("Fluffy", 5, "Himalayan");
+var Furball = new Siamese("Furball", 5);
 
-Spike.getAge;
-Fluffy.getAge;
-
-Spike.feed()
-Fluffy.feed()
-
-Spike.throwBall();
-Fluffy.throwBall();
+// Fluffy throws an error because it isnt a Siamese object
+Furball.siameseMethod()
+Furball.setNoise("Meow")
+Fluffy.siameseMethod()
