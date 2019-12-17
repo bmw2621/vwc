@@ -49,11 +49,15 @@ const nPrimes = (n) => {
 const intToString = (num) => {
     let digits = []
     while(num > 0){
+        // Add right-most digit to index 0 of the digits array
         digits.splice(0,0,num%10)
+        // Drop the right most digit and repeat until there are no more
         num = Math.floor(num/10)
     }
+    // Add 48 to each digit and convert as ascii char code
     digits = digits.map((num) => num + 48)
     digits = digits.map((num) => String.fromCharCode(num))
+    // Join and return
     return digits.join("")
 }
 
